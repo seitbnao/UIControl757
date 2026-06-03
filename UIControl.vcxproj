@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{0CE1332F-1EA6-44DF-8350-7ED933EDAD37}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UIControl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ClientPatch</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>ClientPatch</TargetName>
+    <OutDir>.\Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\Release</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;UICONTROL_EXPORTS;_WINDOWS;_USRDLL;__CLIENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;UICONTROL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;UICONTROL_EXPORTS;_WINDOWS;_USRDLL;__CLIENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;UICONTROL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\CDefinitions.h" />
+    <ClInclude Include="include\CGlobalData.h" />
+    <ClInclude Include="include\ClientAddresses.h" />
+    <ClInclude Include="include\ClientFunctions.h" />
+    <ClInclude Include="include\ItemEffect.h" />
+    <ClInclude Include="include\LogManager.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="include\SCoordinate.h" />
+    <ClInclude Include="include\SFont.h" />
+    <ClInclude Include="include\SListBoxPartyItem.h" />
+    <ClInclude Include="include\SListBoxServerItem.h" />
+    <ClInclude Include="include\SPanelBox.h" />
+    <ClInclude Include="include\SRectangle.h" />
+    <ClInclude Include="include\SSockt.h" />
+    <ClInclude Include="include\Console.h" />
+    <ClInclude Include="include\framework.h" />
+    <ClInclude Include="include\BaseHeader.h" />
+    <ClInclude Include="include\BusinessRules.h" />
+    <ClInclude Include="include\Hook.h" />
+    <ClInclude Include="include\HookPatch.h" />
+    <ClInclude Include="include\SCursor.h" />
+    <ClInclude Include="include\Structs.h" />
+    <ClInclude Include="include\TMEffect.h" />
+    <ClInclude Include="include\TMEffectParticle.h" />
+    <ClInclude Include="include\TMFont2.h" />
+    <ClInclude Include="include\TMFont3.h" />
+    <ClInclude Include="include\TMEffectLevelUp.h" />
+    <ClInclude Include="include\TMItem.h" />
+    <ClInclude Include="include\TMObject.h" />
+    <ClInclude Include="include\TMScene.h" />
+    <ClInclude Include="include\PacketControl.h" />
+    <ClInclude Include="include\Singleton.h" />
+    <ClInclude Include="include\SPagingBox.h" />
+    <ClInclude Include="include\SButton.h" />
+    <ClInclude Include="include\SCheckBox.h" />
+    <ClInclude Include="include\SEditableText.h" />
+    <ClInclude Include="include\SGridControlItem.h" />
+    <ClInclude Include="include\SText.h" />
+    <ClInclude Include="include\SListBox.h" />
+    <ClInclude Include="include\TMHuman.h" />
+    <ClInclude Include="include\TMSkillFire.h" />
+    <ClInclude Include="include\TMSkillJudgement.h" />
+    <ClInclude Include="include\TreeNode.h" />
+    <ClInclude Include="include\UINPCControl.h" />
+    <ClInclude Include="include\S3DObj.h" />
+    <ClInclude Include="include\SProgressBar.h" />
+    <ClInclude Include="include\SScrollBar.h" />
+    <ClInclude Include="include\SGridControl.h" />
+    <ClInclude Include="include\SPanel.h" />
+    <ClInclude Include="include\SControl.h" />
+    <ClInclude Include="include\UserFunctions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Business\Items\AcceptNewEquipament.cpp" />
+    <ClCompile Include="src\Business\Items\ActionOnItem.cpp" />
+    <ClCompile Include="src\Business\Items\CantMoveItem.cpp" />
+    <ClCompile Include="src\Core\CGlobalData.cpp" />
+    <ClCompile Include="src\Core\ClientFunctions.cpp" />
+    <ClCompile Include="src\Business\Chat\CommandControl.cpp" />
+    <ClCompile Include="src\Business\Input\ControleDeButoes.cpp" />
+    <ClCompile Include="src\Business\Input\ControleDeMenssageBox.cpp" />
+    <ClCompile Include="src\Business\Input\ControleDeTeclas.cpp" />
+    <ClCompile Include="src\App\dllmain.cpp" />
+    <ClCompile Include="src\App\BaseHeader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\HKD_AddItemDescription.cpp" />
+    <ClCompile Include="src\Business\Items\HKD_AddItemAmount.cpp" />
+    <ClCompile Include="src\Business\Server\HKD_ChangeServerList.cpp" />
+    <ClCompile Include="src\Core\HKD_GetResolution.cpp" />
+    <ClCompile Include="src\Core\LogManager.cpp" />
+    <ClCompile Include="src\Hooking\HookPatch.cpp" />
+    <ClCompile Include="src\UI\Inventory\Inventory.cpp" />
+    <ClCompile Include="src\Business\Items\ItemTooltipe.cpp" />
+    <ClCompile Include="src\Business\Input\KeyScapeControl.cpp" />
+    <ClCompile Include="src\Scenes\LoadSceneControl.cpp" />
+    <ClCompile Include="src\Scenes\MainLoop.cpp" />
+    <ClCompile Include="src\UI\Mouse\SControlMouseController.cpp" />
+    <ClCompile Include="src\UI\Mouse\SEditableTextMouseControl.cpp" />
+    <ClCompile Include="src\Business\Npc\ProcessNPC.cpp" />
+    <ClCompile Include="src\Business\Items\ProcessUseItem.cpp" />
+    <ClCompile Include="src\Network\RECV_Packet.cpp" />
+    <ClCompile Include="src\Scenes\SceneLogin.cpp" />
+    <ClCompile Include="src\Scenes\SceneSelChar.cpp" />
+    <ClCompile Include="src\Scenes\SceneWorld.cpp" />
+    <ClCompile Include="src\Network\SEND_Packet.cpp" />
+    <ClCompile Include="src\Business\Npc\TMHumanUpdate.cpp" />
+    <ClCompile Include="src\Business\Npc\UpdateScore.cpp" />
+    <ClCompile Include="src\Core\UserFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UIControl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

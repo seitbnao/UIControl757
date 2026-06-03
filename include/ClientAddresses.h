@@ -1,0 +1,593 @@
+/*
+*   Copyright (C) {2019.1}  {Djunio - SeiTbNao - Wed}
+*
+*   This program is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   This program is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with this program.  If not, see [http://www.gnu.org/licenses/].
+*
+*/
+#pragma once
+
+// Keep raw macros for MSVC inline assembly. Use the namespaced constants in C++.
+#define CLIENT_ADDR_TEXT_SECTION_BEGIN 0x00401000
+#define CLIENT_ADDR_TEXT_SECTION_SIZE 0x001F3000
+
+#define CLIENT_ADDR_TM_SCENE 0x006D03B8
+#define CLIENT_ADDR_TM_MOUSE_ITEM 0x00615F00
+#define CLIENT_ADDR_COMPONENT_COUNT 0x00615F04
+#define CLIENT_ADDR_DELTA_TIME 0x00981AD4
+#define CLIENT_ADDR_SCENE_LOAD_CONTEXT 0x00981F60
+#define CLIENT_ADDR_PACKET_INSTANCE 0x001F69F24
+#define CLIENT_ADDR_SOCKET_INSTANCE 0x001F69F2C
+#define CLIENT_ADDR_CURSOR_PRIMARY 0x00606D80
+#define CLIENT_ADDR_CURSOR_SECONDARY 0x00616740
+
+#define CLIENT_ADDR_SKILL_DATA 0x00EBA140
+#define CLIENT_ADDR_ITEM_LIST 0x00C98F10
+#define CLIENT_ADDR_SERVER_LIST 0x00EB85C0
+#define CLIENT_ADDR_EFFECT_FLAG_0 0x01F6A0C0
+#define CLIENT_ADDR_EFFECT_FLAG_1 0x01F6A0C4
+#define CLIENT_ADDR_EFFECT_FLAG_2 0x01F6A0C8
+#define CLIENT_ADDR_ESC_STATE 0x01F6A0B0
+
+#define CLIENT_FN_ALLOC_CLASS 0x005C5A53
+#define CLIENT_FN_FLOAT_TO_INT 0x005C5B70
+#define CLIENT_FN_GET_FIELD_SCENE 0x00499EC2
+#define CLIENT_FN_SCENE_LOADED 0x00499ED3
+#define CLIENT_FN_SEND_SOCKET_PACKET 0x0054D208
+
+
+// Raw aliases for addresses that still need semantic names.
+#ifndef CLIENT_RAW_0040104C
+#define CLIENT_RAW_0040104C 0x0040104C
+#endif
+#ifndef CLIENT_RAW_00401188
+#define CLIENT_RAW_00401188 0x00401188
+#endif
+#ifndef CLIENT_RAW_00401426
+#define CLIENT_RAW_00401426 0x00401426
+#endif
+#ifndef CLIENT_RAW_00401584
+#define CLIENT_RAW_00401584 0x00401584
+#endif
+#ifndef CLIENT_RAW_0040159D
+#define CLIENT_RAW_0040159D 0x0040159D
+#endif
+#ifndef CLIENT_RAW_004015F7
+#define CLIENT_RAW_004015F7 0x004015F7
+#endif
+#ifndef CLIENT_RAW_00401780
+#define CLIENT_RAW_00401780 0x00401780
+#endif
+#ifndef CLIENT_RAW_00401A96
+#define CLIENT_RAW_00401A96 0x00401A96
+#endif
+#ifndef CLIENT_RAW_00401CD9
+#define CLIENT_RAW_00401CD9 0x00401CD9
+#endif
+#ifndef CLIENT_RAW_004021CB
+#define CLIENT_RAW_004021CB 0x004021CB
+#endif
+#ifndef CLIENT_RAW_00402207
+#define CLIENT_RAW_00402207 0x00402207
+#endif
+#ifndef CLIENT_RAW_0040232B
+#define CLIENT_RAW_0040232B 0x0040232B
+#endif
+#ifndef CLIENT_RAW_0040297A
+#define CLIENT_RAW_0040297A 0x0040297A
+#endif
+#ifndef CLIENT_RAW_0040332F
+#define CLIENT_RAW_0040332F 0x0040332F
+#endif
+#ifndef CLIENT_RAW_004036FB
+#define CLIENT_RAW_004036FB 0x004036FB
+#endif
+#ifndef CLIENT_RAW_00403CF5
+#define CLIENT_RAW_00403CF5 0x00403CF5
+#endif
+#ifndef CLIENT_RAW_00404CB5
+#define CLIENT_RAW_00404CB5 0x00404CB5
+#endif
+#ifndef CLIENT_RAW_00404FAA
+#define CLIENT_RAW_00404FAA 0x00404FAA
+#endif
+#ifndef CLIENT_RAW_00404FF1
+#define CLIENT_RAW_00404FF1 0x00404FF1
+#endif
+#ifndef CLIENT_RAW_00405025
+#define CLIENT_RAW_00405025 0x00405025
+#endif
+#ifndef CLIENT_RAW_00405039
+#define CLIENT_RAW_00405039 0x00405039
+#endif
+#ifndef CLIENT_RAW_0040504D
+#define CLIENT_RAW_0040504D 0x0040504D
+#endif
+#ifndef CLIENT_RAW_004053E3
+#define CLIENT_RAW_004053E3 0x004053E3
+#endif
+#ifndef CLIENT_RAW_00405C0B
+#define CLIENT_RAW_00405C0B 0x00405C0B
+#endif
+#ifndef CLIENT_RAW_00405C2C
+#define CLIENT_RAW_00405C2C 0x00405C2C
+#endif
+#ifndef CLIENT_RAW_00405C3D
+#define CLIENT_RAW_00405C3D 0x00405C3D
+#endif
+#ifndef CLIENT_RAW_00405C5E
+#define CLIENT_RAW_00405C5E 0x00405C5E
+#endif
+#ifndef CLIENT_RAW_00405C6F
+#define CLIENT_RAW_00405C6F 0x00405C6F
+#endif
+#ifndef CLIENT_RAW_00405D6D
+#define CLIENT_RAW_00405D6D 0x00405D6D
+#endif
+#ifndef CLIENT_RAW_00405E0D
+#define CLIENT_RAW_00405E0D 0x00405E0D
+#endif
+#ifndef CLIENT_RAW_00405E50
+#define CLIENT_RAW_00405E50 0x00405E50
+#endif
+#ifndef CLIENT_RAW_00406083
+#define CLIENT_RAW_00406083 0x00406083
+#endif
+#ifndef CLIENT_RAW_00406220
+#define CLIENT_RAW_00406220 0x00406220
+#endif
+#ifndef CLIENT_RAW_004062C7
+#define CLIENT_RAW_004062C7 0x004062C7
+#endif
+#ifndef CLIENT_RAW_00406452
+#define CLIENT_RAW_00406452 0x00406452
+#endif
+#ifndef CLIENT_RAW_00406499
+#define CLIENT_RAW_00406499 0x00406499
+#endif
+#ifndef CLIENT_RAW_00406FC3
+#define CLIENT_RAW_00406FC3 0x00406FC3
+#endif
+#ifndef CLIENT_RAW_0040730D
+#define CLIENT_RAW_0040730D 0x0040730D
+#endif
+#ifndef CLIENT_RAW_00407409
+#define CLIENT_RAW_00407409 0x00407409
+#endif
+#ifndef CLIENT_RAW_00407877
+#define CLIENT_RAW_00407877 0x00407877
+#endif
+#ifndef CLIENT_RAW_004083B9
+#define CLIENT_RAW_004083B9 0x004083B9
+#endif
+#ifndef CLIENT_RAW_00408605
+#define CLIENT_RAW_00408605 0x00408605
+#endif
+#ifndef CLIENT_RAW_00408842
+#define CLIENT_RAW_00408842 0x00408842
+#endif
+#ifndef CLIENT_RAW_00408C7F
+#define CLIENT_RAW_00408C7F 0x00408C7F
+#endif
+#ifndef CLIENT_RAW_00408DC5
+#define CLIENT_RAW_00408DC5 0x00408DC5
+#endif
+#ifndef CLIENT_RAW_00409024
+#define CLIENT_RAW_00409024 0x00409024
+#endif
+#ifndef CLIENT_RAW_0040914B
+#define CLIENT_RAW_0040914B 0x0040914B
+#endif
+#ifndef CLIENT_RAW_0040917D
+#define CLIENT_RAW_0040917D 0x0040917D
+#endif
+#ifndef CLIENT_RAW_004092B0
+#define CLIENT_RAW_004092B0 0x004092B0
+#endif
+#ifndef CLIENT_RAW_0040979C
+#define CLIENT_RAW_0040979C 0x0040979C
+#endif
+#ifndef CLIENT_RAW_00409C53
+#define CLIENT_RAW_00409C53 0x00409C53
+#endif
+#ifndef CLIENT_RAW_00409E59
+#define CLIENT_RAW_00409E59 0x00409E59
+#endif
+#ifndef CLIENT_RAW_0040CEB9
+#define CLIENT_RAW_0040CEB9 0x0040CEB9
+#endif
+#ifndef CLIENT_RAW_0040CF0E
+#define CLIENT_RAW_0040CF0E 0x0040CF0E
+#endif
+#ifndef CLIENT_RAW_0040D36E
+#define CLIENT_RAW_0040D36E 0x0040D36E
+#endif
+#ifndef CLIENT_RAW_0040DB2D
+#define CLIENT_RAW_0040DB2D 0x0040DB2D
+#endif
+#ifndef CLIENT_RAW_0040DD96
+#define CLIENT_RAW_0040DD96 0x0040DD96
+#endif
+#ifndef CLIENT_RAW_0040DE4C
+#define CLIENT_RAW_0040DE4C 0x0040DE4C
+#endif
+#ifndef CLIENT_RAW_0040E35A
+#define CLIENT_RAW_0040E35A 0x0040E35A
+#endif
+#ifndef CLIENT_RAW_0040E516
+#define CLIENT_RAW_0040E516 0x0040E516
+#endif
+#ifndef CLIENT_RAW_0040E673
+#define CLIENT_RAW_0040E673 0x0040E673
+#endif
+#ifndef CLIENT_RAW_0040E7F4
+#define CLIENT_RAW_0040E7F4 0x0040E7F4
+#endif
+#ifndef CLIENT_RAW_0040F43A
+#define CLIENT_RAW_0040F43A 0x0040F43A
+#endif
+#ifndef CLIENT_RAW_0040F66A
+#define CLIENT_RAW_0040F66A 0x0040F66A
+#endif
+#ifndef CLIENT_RAW_0040F819
+#define CLIENT_RAW_0040F819 0x0040F819
+#endif
+#ifndef CLIENT_RAW_0040F9B2
+#define CLIENT_RAW_0040F9B2 0x0040F9B2
+#endif
+#ifndef CLIENT_RAW_004127E8
+#define CLIENT_RAW_004127E8 0x004127E8
+#endif
+#ifndef CLIENT_RAW_00412808
+#define CLIENT_RAW_00412808 0x00412808
+#endif
+#ifndef CLIENT_RAW_0041C018
+#define CLIENT_RAW_0041C018 0x0041C018
+#endif
+#ifndef CLIENT_RAW_0041D8D1
+#define CLIENT_RAW_0041D8D1 0x0041D8D1
+#endif
+#ifndef CLIENT_RAW_0041D91B
+#define CLIENT_RAW_0041D91B 0x0041D91B
+#endif
+#ifndef CLIENT_RAW_0041F73D
+#define CLIENT_RAW_0041F73D 0x0041F73D
+#endif
+#ifndef CLIENT_RAW_0041F88C
+#define CLIENT_RAW_0041F88C 0x0041F88C
+#endif
+#ifndef CLIENT_RAW_0041FEBF
+#define CLIENT_RAW_0041FEBF 0x0041FEBF
+#endif
+#ifndef CLIENT_RAW_0042005E
+#define CLIENT_RAW_0042005E 0x0042005E
+#endif
+#ifndef CLIENT_RAW_00420C25
+#define CLIENT_RAW_00420C25 0x00420C25
+#endif
+#ifndef CLIENT_RAW_00421B10
+#define CLIENT_RAW_00421B10 0x00421B10
+#endif
+#ifndef CLIENT_RAW_00421D1F
+#define CLIENT_RAW_00421D1F 0x00421D1F
+#endif
+#ifndef CLIENT_RAW_00422AD0
+#define CLIENT_RAW_00422AD0 0x00422AD0
+#endif
+#ifndef CLIENT_RAW_00424D0C
+#define CLIENT_RAW_00424D0C 0x00424D0C
+#endif
+#ifndef CLIENT_RAW_004251CE
+#define CLIENT_RAW_004251CE 0x004251CE
+#endif
+#ifndef CLIENT_RAW_00437853
+#define CLIENT_RAW_00437853 0x00437853
+#endif
+#ifndef CLIENT_RAW_00437B10
+#define CLIENT_RAW_00437B10 0x00437B10
+#endif
+#ifndef CLIENT_RAW_0044B136
+#define CLIENT_RAW_0044B136 0x0044B136
+#endif
+#ifndef CLIENT_RAW_0044B840
+#define CLIENT_RAW_0044B840 0x0044B840
+#endif
+#ifndef CLIENT_RAW_0044F46A
+#define CLIENT_RAW_0044F46A 0x0044F46A
+#endif
+#ifndef CLIENT_RAW_00453B93
+#define CLIENT_RAW_00453B93 0x00453B93
+#endif
+#ifndef CLIENT_RAW_00453FDD
+#define CLIENT_RAW_00453FDD 0x00453FDD
+#endif
+#ifndef CLIENT_RAW_0045FB73
+#define CLIENT_RAW_0045FB73 0x0045FB73
+#endif
+#ifndef CLIENT_RAW_00460257
+#define CLIENT_RAW_00460257 0x00460257
+#endif
+#ifndef CLIENT_RAW_0046373E
+#define CLIENT_RAW_0046373E 0x0046373E
+#endif
+#ifndef CLIENT_RAW_00463D2E
+#define CLIENT_RAW_00463D2E 0x00463D2E
+#endif
+#ifndef CLIENT_RAW_00466CE9
+#define CLIENT_RAW_00466CE9 0x00466CE9
+#endif
+#ifndef CLIENT_RAW_0046AA04
+#define CLIENT_RAW_0046AA04 0x0046AA04
+#endif
+#ifndef CLIENT_RAW_00472C27
+#define CLIENT_RAW_00472C27 0x00472C27
+#endif
+#ifndef CLIENT_RAW_00472C29
+#define CLIENT_RAW_00472C29 0x00472C29
+#endif
+#ifndef CLIENT_RAW_0047E09C
+#define CLIENT_RAW_0047E09C 0x0047E09C
+#endif
+#ifndef CLIENT_RAW_004968C0
+#define CLIENT_RAW_004968C0 0x004968C0
+#endif
+#ifndef CLIENT_RAW_00496AAC
+#define CLIENT_RAW_00496AAC 0x00496AAC
+#endif
+#ifndef CLIENT_RAW_00496ED8
+#define CLIENT_RAW_00496ED8 0x00496ED8
+#endif
+#ifndef CLIENT_RAW_004990C0
+#define CLIENT_RAW_004990C0 0x004990C0
+#endif
+#ifndef CLIENT_RAW_00499EC2
+#define CLIENT_RAW_00499EC2 0x00499EC2
+#endif
+#ifndef CLIENT_RAW_00499ED3
+#define CLIENT_RAW_00499ED3 0x00499ED3
+#endif
+#ifndef CLIENT_RAW_004A3CDB
+#define CLIENT_RAW_004A3CDB 0x004A3CDB
+#endif
+#ifndef CLIENT_RAW_004A3EFB
+#define CLIENT_RAW_004A3EFB 0x004A3EFB
+#endif
+#ifndef CLIENT_RAW_004A8AE5
+#define CLIENT_RAW_004A8AE5 0x004A8AE5
+#endif
+#ifndef CLIENT_RAW_004B1665
+#define CLIENT_RAW_004B1665 0x004B1665
+#endif
+#ifndef CLIENT_RAW_004B30E0
+#define CLIENT_RAW_004B30E0 0x004B30E0
+#endif
+#ifndef CLIENT_RAW_004B47CE
+#define CLIENT_RAW_004B47CE 0x004B47CE
+#endif
+#ifndef CLIENT_RAW_004B47E9
+#define CLIENT_RAW_004B47E9 0x004B47E9
+#endif
+#ifndef CLIENT_RAW_004D90FC
+#define CLIENT_RAW_004D90FC 0x004D90FC
+#endif
+#ifndef CLIENT_RAW_004D920F
+#define CLIENT_RAW_004D920F 0x004D920F
+#endif
+#ifndef CLIENT_RAW_004DAC12
+#define CLIENT_RAW_004DAC12 0x004DAC12
+#endif
+#ifndef CLIENT_RAW_004E3762
+#define CLIENT_RAW_004E3762 0x004E3762
+#endif
+#ifndef CLIENT_RAW_00501D66
+#define CLIENT_RAW_00501D66 0x00501D66
+#endif
+#ifndef CLIENT_RAW_00528262
+#define CLIENT_RAW_00528262 0x00528262
+#endif
+#ifndef CLIENT_RAW_0054219F
+#define CLIENT_RAW_0054219F 0x0054219F
+#endif
+#ifndef CLIENT_RAW_00549F8E
+#define CLIENT_RAW_00549F8E 0x00549F8E
+#endif
+#ifndef CLIENT_RAW_00559C20
+#define CLIENT_RAW_00559C20 0x00559C20
+#endif
+#ifndef CLIENT_RAW_0055A4D0
+#define CLIENT_RAW_0055A4D0 0x0055A4D0
+#endif
+#ifndef CLIENT_RAW_0055CF40
+#define CLIENT_RAW_0055CF40 0x0055CF40
+#endif
+#ifndef CLIENT_RAW_0056AED0
+#define CLIENT_RAW_0056AED0 0x0056AED0
+#endif
+#ifndef CLIENT_RAW_00576000
+#define CLIENT_RAW_00576000 0x00576000
+#endif
+#ifndef CLIENT_RAW_005C5B70
+#define CLIENT_RAW_005C5B70 0x005C5B70
+#endif
+#ifndef CLIENT_RAW_005F450C
+#define CLIENT_RAW_005F450C 0x005F450C
+#endif
+#ifndef CLIENT_RAW_005F4598
+#define CLIENT_RAW_005F4598 0x005F4598
+#endif
+#ifndef CLIENT_RAW_005F4628
+#define CLIENT_RAW_005F4628 0x005F4628
+#endif
+#ifndef CLIENT_RAW_005F46D4
+#define CLIENT_RAW_005F46D4 0x005F46D4
+#endif
+#ifndef CLIENT_RAW_005F489C
+#define CLIENT_RAW_005F489C 0x005F489C
+#endif
+#ifndef CLIENT_RAW_005F49E4
+#define CLIENT_RAW_005F49E4 0x005F49E4
+#endif
+#ifndef CLIENT_RAW_005F4D58
+#define CLIENT_RAW_005F4D58 0x005F4D58
+#endif
+#ifndef CLIENT_RAW_005F4DE4
+#define CLIENT_RAW_005F4DE4 0x005F4DE4
+#endif
+#ifndef CLIENT_RAW_005F5090
+#define CLIENT_RAW_005F5090 0x005F5090
+#endif
+#ifndef CLIENT_RAW_005F5174
+#define CLIENT_RAW_005F5174 0x005F5174
+#endif
+#ifndef CLIENT_RAW_005F9F4C
+#define CLIENT_RAW_005F9F4C 0x005F9F4C
+#endif
+#ifndef CLIENT_RAW_00606D80
+#define CLIENT_RAW_00606D80 0x00606D80
+#endif
+#ifndef CLIENT_RAW_00616740
+#define CLIENT_RAW_00616740 0x00616740
+#endif
+#ifndef CLIENT_RAW_006D03B8
+#define CLIENT_RAW_006D03B8 0x006D03B8
+#endif
+#ifndef CLIENT_RAW_00878BCC
+#define CLIENT_RAW_00878BCC 0x00878BCC
+#endif
+#ifndef CLIENT_RAW_00981F60
+#define CLIENT_RAW_00981F60 0x00981F60
+#endif
+#ifndef CLIENT_RAW_01F69F2C
+#define CLIENT_RAW_01F69F2C 0x01F69F2C
+#endif
+#ifndef CLIENT_RAW_01F6A0B0
+#define CLIENT_RAW_01F6A0B0 0x01F6A0B0
+#endif
+
+namespace ClientAddresses {
+namespace Memory {
+constexpr DWORD TextSectionBegin = CLIENT_ADDR_TEXT_SECTION_BEGIN;
+constexpr DWORD TextSectionSize = CLIENT_ADDR_TEXT_SECTION_SIZE;
+constexpr DWORD TMScene = CLIENT_ADDR_TM_SCENE;
+constexpr DWORD TMMouseItem = CLIENT_ADDR_TM_MOUSE_ITEM;
+constexpr DWORD ComponentCount = CLIENT_ADDR_COMPONENT_COUNT;
+constexpr DWORD DeltaTime = CLIENT_ADDR_DELTA_TIME;
+constexpr DWORD SceneLoadContext = CLIENT_ADDR_SCENE_LOAD_CONTEXT;
+constexpr DWORD PacketInstance = CLIENT_ADDR_PACKET_INSTANCE;
+constexpr DWORD SocketInstance = CLIENT_ADDR_SOCKET_INSTANCE;
+constexpr DWORD CursorPrimary = CLIENT_ADDR_CURSOR_PRIMARY;
+constexpr DWORD CursorSecondary = CLIENT_ADDR_CURSOR_SECONDARY;
+constexpr DWORD SkillData = CLIENT_ADDR_SKILL_DATA;
+constexpr DWORD ItemList = CLIENT_ADDR_ITEM_LIST;
+constexpr DWORD ServerList = CLIENT_ADDR_SERVER_LIST;
+constexpr DWORD EffectFlag0 = CLIENT_ADDR_EFFECT_FLAG_0;
+constexpr DWORD EffectFlag1 = CLIENT_ADDR_EFFECT_FLAG_1;
+constexpr DWORD EffectFlag2 = CLIENT_ADDR_EFFECT_FLAG_2;
+constexpr DWORD EscState = CLIENT_ADDR_ESC_STATE;
+}  // namespace Memory
+
+namespace Function {
+constexpr DWORD AllocClass = CLIENT_FN_ALLOC_CLASS;
+constexpr DWORD FloatToInt = CLIENT_FN_FLOAT_TO_INT;
+constexpr DWORD GetFieldScene = CLIENT_FN_GET_FIELD_SCENE;
+constexpr DWORD SceneLoaded = CLIENT_FN_SCENE_LOADED;
+constexpr DWORD SendSocketPacket = CLIENT_FN_SEND_SOCKET_PACKET;
+
+constexpr DWORD ClientMessageShow = 0x0040409E;
+constexpr DWORD PacketSend = 0x00425730;
+constexpr DWORD InsideView = 0x00437853;
+constexpr DWORD SetTextColor = 0x00421D1F;
+constexpr DWORD TreeNodeCtor = 0x00534940;
+constexpr DWORD TreeNodeRemove = 0x00499130;
+constexpr DWORD TreeNodeGet = 0x0040BE60;
+constexpr DWORD TreeNodeAttach = 0x00534B69;
+constexpr DWORD TreeNodeOver = 0x00534C44;
+constexpr DWORD TreeNodeAbove = 0x00534CA1;
+constexpr DWORD TreeNodeSetReference = 0x0040C170;
+constexpr DWORD TreeNodeDispose = 0x00534B43;
+
+constexpr DWORD SControlCreate = 0x0040104C;
+constexpr DWORD SControlCheckRect = 0x004011FA;
+constexpr DWORD SControlSetLeftTop = 0x00401286;
+constexpr DWORD SControlSetSize = 0x00401267;
+constexpr DWORD SControlSetSizeAlt = 0x004012A5;
+constexpr DWORD SControlUpdateProportions = 0x004012C4;
+constexpr DWORD SControlClearLeft = 0x00401327;
+constexpr DWORD SControlClearTop = 0x0040136D;
+constexpr DWORD SControlAssertLeftTop = 0x00401233;
+constexpr DWORD SControlDown = 0x00401382;
+constexpr DWORD SControlSetVisibility = 0x0040159D;
+constexpr DWORD SControlSetHandle = 0x0040C110;
+constexpr DWORD SControlRemoveClass = 0x00534D66;
+constexpr DWORD SControlDelete = 0x00499130;
+constexpr DWORD SControlSetClass = 0x00534BF2;
+constexpr DWORD SControlRemoveAll = 0x005349A5;
+constexpr DWORD SControlResize = 0x004015F7;
+
+constexpr DWORD TMSceneReload = 0x004B8A99;
+constexpr DWORD TMSceneReadFile = 0x0049C601;
+constexpr DWORD TMSceneUpdateGrid = 0x00465324;
+constexpr DWORD TMSceneOpenCargo = 0x0044BF96;
+constexpr DWORD TMSceneOnExecute = 0x004B15E4;
+constexpr DWORD TMSceneProjectPosition = 0x004A207A;
+}  // namespace Function
+
+namespace Hook {
+constexpr DWORD SkillDataChecksumPatch = 0x0053A32A;
+constexpr DWORD ItemListChecksumPatchA = 0x0053A412;
+constexpr DWORD ItemListChecksumPatchB = 0x0053A53E;
+constexpr DWORD ObjectChecksumPatch = 0x004B53B3;
+constexpr DWORD FindWindowPatch = 0x0054D7A1;
+
+constexpr DWORD MapChecksumBypassA = 0x0052F5E8;
+constexpr DWORD MapChecksumBypassADest = 0x0052F69E;
+constexpr DWORD MapChecksumBypassB = 0x0051E071;
+constexpr DWORD MapChecksumBypassBDest = 0x0051E104;
+
+constexpr DWORD HandleWorldScene = 0x0046A9FD;
+constexpr DWORD HandleServerScene = 0x004B165E;
+constexpr DWORD HandleSelCharScene = 0x004A8ADE;
+constexpr DWORD TextInputKeyControl = 0x00406493;
+constexpr DWORD MessageBoxControl = 0x00463738;
+constexpr DWORD FixMageMacroA = 0x00496CA8;
+constexpr DWORD FixMageMacroB = 0x00496CB8;
+constexpr DWORD ShowItemDescription = 0x0041FEB8;
+constexpr DWORD ProcessNpcClick = 0x0045FB6C;
+constexpr DWORD ControlKeyPress = 0x00453B8A;
+constexpr DWORD CantMoveItem = 0x004127E1;
+constexpr DWORD ActionOnItem = 0x0041F885;
+constexpr DWORD ProcessUseItem = 0x0041D915;
+constexpr DWORD AcceptNewEquipment = 0x00420C35;
+constexpr DWORD MainLoop = 0x0040CEB0;
+constexpr DWORD EndSendScore = 0x0044B12C;
+constexpr DWORD LoadWorldScene = 0x004D9209;
+constexpr DWORD CameraDistance = 0x004B47B8;
+constexpr DWORD InventoryOpen = 0x0044B834;
+constexpr DWORD SendPacket = 0x004251C7;
+constexpr DWORD RecvPacket = 0x00424C16;
+constexpr DWORD TextBoxMouseControl = 0x0040636C;
+constexpr DWORD CommandControl = 0x00466C6E;
+constexpr DWORD ExternalBuffA = 0x00549BAE;
+constexpr DWORD ExternalBuffB = 0x00549BCE;
+constexpr DWORD EscapeKeyControl = 0x0044F463;
+constexpr DWORD SelCharLimitPatch = 0x004A8BD1;
+constexpr DWORD ChangeServerList = 0x0054219A;
+constexpr DWORD CurrentResolution = 0x00549F84;
+constexpr DWORD ItemAmountMinPatch = 0x00420040;
+constexpr DWORD ItemAmountMaxPatch = 0x00420053;
+constexpr DWORD AddAmountItem = 0x00420034;
+constexpr DWORD FixItemDescription = 0x0041C00F;
+constexpr DWORD TextMouseControl = 0x00402201;
+constexpr DWORD SControlMouseControl = 0x0040177A;
+}  // namespace Hook
+}  // namespace ClientAddresses

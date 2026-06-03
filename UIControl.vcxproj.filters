@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CDF4B625-D47E-484B-B748-66401545993E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\App">
+      <UniqueIdentifier>{115A8A9F-8396-4056-BA3C-9B2BB62E4E08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{15C70963-239B-4AB6-A6B2-9B2A4EBF9FBC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hooking">
+      <UniqueIdentifier>{1EF1A08F-7F28-4FE9-AB65-80E5CAF3EE31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Network">
+      <UniqueIdentifier>{6EF36441-FB88-4516-B826-FD547E7F31F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{0B5F388D-0F42-4D11-9C4D-5B659E38AEF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business">
+      <UniqueIdentifier>{9DD810EF-A516-4823-8D03-6B2B78E5FE60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business\Chat">
+      <UniqueIdentifier>{8717D4D8-E746-4EDC-AC44-FAF8E6B98B9E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business\Input">
+      <UniqueIdentifier>{3647A819-3D5B-4546-B093-F84CF5779CC2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business\Items">
+      <UniqueIdentifier>{3B900513-E513-4705-B4A5-96EA7805A3FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business\Npc">
+      <UniqueIdentifier>{B6E97505-10D4-41C2-A508-EC3C1E4E76BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Business\Server">
+      <UniqueIdentifier>{26E467EA-B621-4156-A6B6-72F22DD57354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{34D2E5F2-2E34-4BCD-A043-F9F1257F0873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Inventory">
+      <UniqueIdentifier>{2C35E429-22A9-4CF7-8692-8FCB9A937AF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Mouse">
+      <UniqueIdentifier>{BE43C4AA-A1CA-4CCA-9805-7257D67823C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{00755327-DE1B-49CD-850D-B0DC8C184FC5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{D04A8E83-E3F7-41A4-A9C0-7F3AE405F518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hooking">
+      <UniqueIdentifier>{88590AEB-BBBF-44E0-999F-9CA7EAFB2E13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Network">
+      <UniqueIdentifier>{071A7AD4-DE46-43A4-9D15-76FBB3C65D21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{77A8E422-8649-4C8B-BCB3-4931340BEC01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Controls">
+      <UniqueIdentifier>{A4A6F10C-3347-4159-B987-2D34DFA0F4DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Effects">
+      <UniqueIdentifier>{BF10CB07-7B74-48B2-9F43-E3D8CE5BDB22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{E8CE25F8-8207-49D4-907E-5772D6A2E1CB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\BaseHeader.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BusinessRules.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CDefinitions.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CGlobalData.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ClientAddresses.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ClientFunctions.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Console.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\framework.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hook.h">
+      <Filter>Header Files\Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="include\HookPatch.h">
+      <Filter>Header Files\Hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ItemEffect.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LogManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PacketControl.h">
+      <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\S3DObj.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SButton.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SCheckBox.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SControl.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SCoordinate.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SCursor.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SEditableText.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SFont.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SGridControl.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SGridControlItem.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Singleton.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SListBox.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SListBoxPartyItem.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SListBoxServerItem.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SPagingBox.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SPanel.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SPanelBox.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SProgressBar.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SRectangle.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SScrollBar.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SSockt.h">
+      <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SText.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Structs.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMEffect.h">
+      <Filter>Header Files\UI\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMEffectLevelUp.h">
+      <Filter>Header Files\UI\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMEffectParticle.h">
+      <Filter>Header Files\UI\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMFont2.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMFont3.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMHuman.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMItem.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMObject.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMScene.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMSkillFire.h">
+      <Filter>Header Files\UI\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TMSkillJudgement.h">
+      <Filter>Header Files\UI\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TreeNode.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UINPCControl.h">
+      <Filter>Header Files\UI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UserFunctions.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\App\BaseHeader.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\App\dllmain.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Chat\CommandControl.cpp">
+      <Filter>Source Files\Business\Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Input\ControleDeButoes.cpp">
+      <Filter>Source Files\Business\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Input\ControleDeMenssageBox.cpp">
+      <Filter>Source Files\Business\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Input\ControleDeTeclas.cpp">
+      <Filter>Source Files\Business\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Input\KeyScapeControl.cpp">
+      <Filter>Source Files\Business\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\AcceptNewEquipament.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\ActionOnItem.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\CantMoveItem.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\HKD_AddItemAmount.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\HKD_AddItemDescription.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\ItemTooltipe.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Items\ProcessUseItem.cpp">
+      <Filter>Source Files\Business\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Npc\ProcessNPC.cpp">
+      <Filter>Source Files\Business\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Npc\TMHumanUpdate.cpp">
+      <Filter>Source Files\Business\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Npc\UpdateScore.cpp">
+      <Filter>Source Files\Business\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Business\Server\HKD_ChangeServerList.cpp">
+      <Filter>Source Files\Business\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\CGlobalData.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\ClientFunctions.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\HKD_GetResolution.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\LogManager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\UserFunctions.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hooking\HookPatch.cpp">
+      <Filter>Source Files\Hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Network\RECV_Packet.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Network\SEND_Packet.cpp">
+      <Filter>Source Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scenes\LoadSceneControl.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scenes\MainLoop.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scenes\SceneLogin.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scenes\SceneSelChar.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scenes\SceneWorld.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\Inventory\Inventory.cpp">
+      <Filter>Source Files\UI\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\Mouse\SControlMouseController.cpp">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\Mouse\SEditableTextMouseControl.cpp">
+      <Filter>Source Files\UI\Mouse</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UIControl.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
